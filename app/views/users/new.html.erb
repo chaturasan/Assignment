@@ -1,0 +1,16 @@
+<% provide(:title, 'Sign up') %>
+<h1 class="col-md-offset-6">Sign up</h1>
+<div class="row-fluid">
+<div class="col-md-5 col-md-offset-4">
+
+	<%= bootstrap_form_for(@user) do |f| %>
+  		<%= f.text_field :name,:placeholder => " Name",:autofocus => true %>
+  		<%= f.email_field :email,:placeholder => " Email" %>
+  		<%= f.password_field :password,:placeholder => " Password" %>
+  		<%= f.password_field :password_confirmation,:placeholder => " Re-enter password" %>
+  		<%= f.submit "Sign Up",class: "btn btn-primary" %>
+	<% end %>
+	<br/>
+	<p>Existing User? <%= link_to "Log in", login_path %></p>
+</div>
+</div>

@@ -1,0 +1,9 @@
+<% if logged_in? %>
+		<ul class="nav navbar-nav navbar-right">
+			<li><%= link_to "Posts", post_path %></li>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+		</ul>
+		<h2 class="col-md-offset-4">Welcome <%= @user.name %></h2>
+<% else %>
+	<li class="col-md-offset-6"><%= link_to "Log in", login_path %></li>
+<% end %>

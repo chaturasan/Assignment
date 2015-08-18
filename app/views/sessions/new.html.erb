@@ -1,0 +1,11 @@
+<% provide(:title,"Log in") %>
+<h1 class="col-md-offset-6">Log in</h1>
+<div class="col-md-5 col-md-offset-4">
+	<%= bootstrap_form_for(:session,url: login_path) do |f| %>
+		<%= f.email_field :email,:placeholder => " Email",:autofocus => true %>
+		<%= f.password_field :password,:placeholder => " Password" %>
+		<%= f.submit "Log in", class: "btn btn-primary" %>
+	<% end %>
+	<br/>
+	<p>New User? <%= link_to "Sign up now!", root_url %></p>
+</div>
